@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LxL-Eg-xl7">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Liked-->
+        <scene sceneID="CxQ-Ba-dZP">
+            <objects>
+                <viewController id="j7i-JL-QIK" customClass="LikesViewController" customModule="LikeTunes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zmd-S0-IQr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-lh-reD">
+                                <rect key="frame" x="0.0" y="55" width="390" height="706"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hXh-z4-rM8">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="owV-dW-MWh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="owV-dW-MWh" firstAttribute="trailing" secondItem="4Mc-lh-reD" secondAttribute="trailing" id="8xx-k1-vtm"/>
+                            <constraint firstItem="4Mc-lh-reD" firstAttribute="leading" secondItem="owV-dW-MWh" secondAttribute="leading" id="9Ag-a0-RL4"/>
+                            <constraint firstItem="owV-dW-MWh" firstAttribute="bottom" secondItem="4Mc-lh-reD" secondAttribute="bottom" id="gVv-Hh-mTb"/>
+                            <constraint firstItem="4Mc-lh-reD" firstAttribute="top" secondItem="owV-dW-MWh" secondAttribute="top" constant="8" id="uy6-du-J9c"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Liked" image="star.fill" catalog="system" id="sxB-np-S94"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4Mc-lh-reD" id="agm-SR-5aU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAU-mf-vJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641.53846153846155" y="155.68720379146919"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="lET-DM-AEx">
+            <objects>
+                <viewController id="xiN-eJ-eTm" customClass="SearchViewController" customModule="LikeTunes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g1n-V8-QWf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search for a song" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-bQ-76T">
+                                <rect key="frame" x="-2" y="47" width="392" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Vtr-1S-2Ay"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xiN-eJ-eTm" id="OWC-ub-OCM"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-Td-Rhk">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xyP-Y9-kxr">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HP7-TC-xOb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ARV-Td-Rhk" firstAttribute="leading" secondItem="HP7-TC-xOb" secondAttribute="leading" id="HbV-rz-zcj"/>
+                            <constraint firstItem="ARV-Td-Rhk" firstAttribute="top" secondItem="6A2-bQ-76T" secondAttribute="bottom" id="Jgb-7B-qud"/>
+                            <constraint firstItem="6A2-bQ-76T" firstAttribute="leading" secondItem="g1n-V8-QWf" secondAttribute="leadingMargin" constant="-18" id="NMh-Fl-a3i"/>
+                            <constraint firstItem="HP7-TC-xOb" firstAttribute="bottom" secondItem="ARV-Td-Rhk" secondAttribute="bottom" id="UzG-lG-8mJ"/>
+                            <constraint firstItem="6A2-bQ-76T" firstAttribute="top" secondItem="HP7-TC-xOb" secondAttribute="top" id="sig-Hd-dzW"/>
+                            <constraint firstItem="6A2-bQ-76T" firstAttribute="trailing" secondItem="ARV-Td-Rhk" secondAttribute="trailing" id="tar-y5-gse"/>
+                            <constraint firstItem="HP7-TC-xOb" firstAttribute="trailing" secondItem="ARV-Td-Rhk" secondAttribute="trailing" id="x5k-Fr-ZlV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="G4h-d3-Ar9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ARV-Td-Rhk" id="0dc-z9-KE4"/>
+                        <outlet property="searchBar" destination="6A2-bQ-76T" id="N8Q-of-4T3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCO-EG-NAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641.53846153846155" y="-509.00473933649289"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DeU-H6-qek">
+            <objects>
+                <tabBarController id="LxL-Eg-xl7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dBA-X2-IFg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xiN-eJ-eTm" kind="relationship" relationship="viewControllers" id="IHS-Se-E65"/>
+                        <segue destination="j7i-JL-QIK" kind="relationship" relationship="viewControllers" id="miB-d8-deo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfA-Rs-TId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264" y="-205"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
